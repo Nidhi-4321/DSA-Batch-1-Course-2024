@@ -1,0 +1,22 @@
++complexity
+class Solution {
+    public int diagonalSum(int[][] mat) {
+        int n = mat.length-1;
+        if(n==1)
+            return mat[0][0];
+        int sum = 0;
+    
+        for(int i=0; i<=n ; i++){
+            sum+=mat[i][i];
+            sum+=mat[i][n-i];
+        }
+        int mid = 0;
+
+         
+        if(n%2==0)
+            mid = mat[(int)n/2][(int)n/2];
+        return sum-mid;
+    }
+}
+ 
+    
