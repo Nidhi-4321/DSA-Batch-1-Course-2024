@@ -1,0 +1,13 @@
++complexity
+ int maxLength = 0;
+        int[] userindex = new int[128];
+
+        for (int i = 0 , j = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            j = Math.max(j, useIndex[C]);
+            maxLength = Math.max(maxLength, i- j + 1);
+            useIndex[C] = i + 1;
+        }
+        return maxLength;   
+    }
+}
