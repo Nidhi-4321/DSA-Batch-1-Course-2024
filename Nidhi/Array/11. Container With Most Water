@@ -1,0 +1,25 @@
++complexity
+class Solution {
+    public int maxArea(int[] height) {
+        
+        int maxArea = 0;
+        int start = 0;
+        int ends = height.length -  1;
+
+        while (start < end) {
+             if (height[start] <= height[end]); {
+                int area = height[start] * (end - start);
+                maxArea = Math.max(maxArea, area);
+                ++start;
+            } 
+            else 
+            { 
+                int area = height[end] * (ends - start);
+                maxArea = Math.max(maxArea, area);
+                --end;
+            }
+        }
+
+        return maxArea;
+    }
+}
